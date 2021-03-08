@@ -27,6 +27,7 @@ body {
     height: 60%;
 
     display: flex;
+    box-shadow: 0px 48px 26px -18px #4646bd;
 }
 
 .img_Wraper {
@@ -38,7 +39,7 @@ img[src*='bg-pattern-desktop'] {
     position: relative;
     height: 180%;
     bottom: 56%;
-    right: 87%;
+    left: -94%;
 }
 
 img[src*='woman-online-desktop'] {
@@ -46,6 +47,14 @@ img[src*='woman-online-desktop'] {
     height: 77%;
     bottom: 15%;
     left: -15%;
+    z-index: 1;
+}
+
+img[src*='box-desktop'] {
+    position: absolute;
+    height: 40%;
+    bottom: 23%;
+    left: -10%;
     z-index: 1;
 }
 
@@ -57,8 +66,60 @@ img[src*='woman-online-desktop'] {
     bottom: 1%;
 }
 
-.attribution a { color: hsl(41, 79%, 38%); }
+.attribution a { color: hsl(41.1, 100%, 53.9%); }
 
 .center {
     transform: translate(-50%, -50%);
+}
+
+article {
+    width: 65%;
+    margin-top: 4%;
+    margin-right: 10%;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+dt {
+    font-size: larger;
+    padding-top: 3ch;
+    cursor: pointer;
+    padding-bottom: 1ch;
+}
+
+dt:first-of-type {
+    padding-top: 0;
+}
+
+dt::after{
+    float: right;
+    content: url(/images/icon-arrow-down.svg);
+}
+
+dd {
+    margin: 1ch 0 ;
+    color: 	#787887;
+}
+
+dt:not(dt:first-of-type) {
+    border-top: .1px solid #e7e7e9;
+}
+
+dt:last-of-type::after {
+    content: none;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+.off {
+    display: none;
+}
+
+h1 {
+    font-size: 2.6em;
 }
