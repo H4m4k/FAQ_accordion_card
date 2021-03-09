@@ -87,13 +87,18 @@ dt {
     padding-bottom: 1ch;
 }
 
+dt:hover {
+    color:	#3d2e29 ;
+}
+
 dt:first-of-type {
     padding-top: 0;
 }
 
-dt::after{
+.arrow {
     float: right;
     content: url(/images/icon-arrow-down.svg);
+    transition-duration: 400ms;
 }
 
 dd {
@@ -118,6 +123,10 @@ dl {
 
 .off {
     display: none;
+}
+
+.addWeight {
+    font-weight: 700;
 }
 
 h1 {
