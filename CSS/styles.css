@@ -30,9 +30,14 @@ body {
 }
 
 .img_Wraper {
-    /* overflow: hidden; */
     position: relative;
     width: 45%;
+}
+
+.img_InsideBox {
+    overflow: hidden;
+    position: inherit;
+    min-height: 100%;
 }
 
 img[src*='bg-pattern-desktop'] {
@@ -40,25 +45,22 @@ img[src*='bg-pattern-desktop'] {
     height: 180%;
     bottom: -24%;
     left: -107%;
-    overflow: hidden;
 }
 
 img[src*='woman-online-desktop'] {
     position: absolute;
     height: 77%;
     bottom: 15%;
-    left: -15%;
+    left: -19.5%;
     z-index: 1;
-    overflow: hidden;
 }
 
 img[src*='box-desktop'] {
     position: absolute;
     height: 40%;
     bottom: 23%;
-    left: -10%;
-    z-index: 1;
-    overflow: visible;
+    left: -22%;
+    z-index: 2;
 }
 
 .attribution {
