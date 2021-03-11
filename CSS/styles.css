@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
     height: 100%;
@@ -32,15 +30,17 @@ body {
 }
 
 .img_Wraper {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
+    width: 45%;
 }
 
 img[src*='bg-pattern-desktop'] {
-    position: relative;
+    position: absolute;
     height: 180%;
-    bottom: 56%;
-    left: -94%;
+    bottom: -24%;
+    left: -107%;
+    overflow: hidden;
 }
 
 img[src*='woman-online-desktop'] {
@@ -49,6 +49,7 @@ img[src*='woman-online-desktop'] {
     bottom: 15%;
     left: -15%;
     z-index: 1;
+    overflow: hidden;
 }
 
 img[src*='box-desktop'] {
@@ -57,6 +58,7 @@ img[src*='box-desktop'] {
     bottom: 23%;
     left: -10%;
     z-index: 1;
+    overflow: visible;
 }
 
 .attribution {
@@ -69,16 +71,13 @@ img[src*='box-desktop'] {
 
 .attribution a { color: hsl(41.1, 100%, 53.9%); }
 
-.center {
-    transform: translate(-50%, -50%);
-}
+.center { transform: translate(-50%, -50%); }
 
 article {
-    width: 65%;
-    margin-top: 4%;
-    margin-right: 10%;
+    width: 40%;
+    margin: 4% 10% 0 auto;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 dt {
@@ -88,13 +87,11 @@ dt {
     padding-bottom: 1ch;
 }
 
-dt:hover {
-    color:	#3d2e29 ;
+dt:hover { 
+    color:#f47c57 ;    
 }
 
-dt:first-of-type {
-    padding-top: 0;
-}
+dt:first-of-type { padding-top: 0; }
 
 .arrow {
     float: right;
@@ -107,13 +104,9 @@ dd {
     color: 	#787887;
 }
 
-dt:not(dt:first-of-type) {
-    border-top: .1px solid #e7e7e9;
-}
+dt:not(dt:first-of-type) { border-top: .1px solid #e7e7e9; }
 
-dt:last-of-type::after {
-    content: none;
-}
+dt:last-of-type::after { content: none; }
 
 dl {
     display: flex;
@@ -122,14 +115,61 @@ dl {
     height: 80%;
 }
 
-.off {
-    display: none;
-}
+.off { display: none; }
 
-.addWeight {
-    font-weight: 700;
-}
+.addWeight { font-weight: 700; }
 
-h1 {
-    font-size: 2.6em;
+h1 { font-size: 2.6em; }
+
+@media screen and (max-width:375px) {
+ 
+    .faq_Bg {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        height: 70%;
+        top: 55%;
+    }
+
+    article {
+        width: 85%;
+        margin: 4% 8% 5% 8%;
+        flex-grow: .5;
+    }
+
+    .img_Wraper {
+        overflow: visible;
+        width: 100%;
+        position: static;
+    }
+
+    img[src*='bg-pattern-desktop'] {
+        height: 45%;
+        top: -4%;
+        left: 50%;
+    }
+    
+    img[src*='woman-online-desktop'] {
+        height: 35%;
+        top: -4%;
+        left: 50%;
+        rotate: -1.5deg;
+    }
+    
+    img[src*='box-desktop'] {
+        height: 18%;
+        top: 1.5%;
+        left: 25%;
+    }
+
+    .mobile_Translate { transform: translate(-50%, -50%); }
+    
+    h1 {
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    dl {
+        margin: 0;
+    }
 }
