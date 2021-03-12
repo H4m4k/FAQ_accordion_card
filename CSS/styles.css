@@ -103,7 +103,10 @@ summary:first-of-type { padding-top: 0; }
 
 h1 { font-size: 2.6em; }
 
-details { margin-bottom: 5%; }
+details { 
+    border-bottom: .1px solid hsl(240, 5%, 91%);
+    padding-bottom: 4%;
+ }
 
 .summary_List {
     display: flex;
