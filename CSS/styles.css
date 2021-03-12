@@ -97,6 +97,7 @@ summary:first-of-type { padding-top: 0; }
     float: right;
     content: url(/images/icon-arrow-down.svg);
     transition-duration: 400ms;
+    display: inline-block;  
 }
 
 .addWeight { font-weight: 700; }
