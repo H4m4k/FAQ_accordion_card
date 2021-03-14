@@ -115,10 +115,13 @@ details {
         padding: 3% 0 3% 0;
 }
 
-
 details > p {
     color: #787887;
     width: 90%;
+}
+
+details > summary {
+    list-style-type: none;
 }
 
 .attribution {
@@ -137,50 +140,75 @@ details > p {
 
 
 @media screen and (max-width:375px) {
-    
+
+    body {
+        font-size: smaller;
+    }
+
     .faq_Bg {
         flex-direction: column;
         justify-content: space-between;
-        width: 90%;
+        width: 85%;
         min-height: 70vh;
         top: 55%;
     }
-
+    
     article {
-        width: 85%;
-        margin: 4% 8% 5% 8%;
-        flex-grow: .5;
+        flex-grow: 3;
     }
 
-    .img_Wraper {
-        overflow: visible;
-        width: 100%;
-        position: static;
+    .summary_List {
+        padding: 0 8% 10%;
+        margin: 0;
     }
+
+    details {
+        padding: 1% 0 5% 0;
+    }
+
+    details > p {
+        margin: 0;
+    }
+
+    .img_InsideBox { 
+        overflow: visible;
+        position: initial;}
+
 
     img[src*='bg-pattern-desktop'] {
-        height: 45%;
-        top: -4%;
-        left: 50%;
+       left: 50%;
+       width: 70%;
+       top: -4%;
     }
     
     img[src*='woman-online-desktop'] {
-        height: 35%;
-        top: -4%;
         left: 50%;
+        width: 70%;
         rotate: -1.5deg;
+        height: unset;
+        top: -4%;
+        
     }
     
     img[src*='box-desktop'] {
         height: 18%;
         top: 1.5%;
         left: 25%;
+        z-index:4;
+    }
+
+    .arrow {
+        margin: 0;
     }
 
     .mobile_Translate { transform: translate(-50%, -50%); }
     
     h1 {
         text-align: center;
-        margin-top: 15%;
+        margin-top: 20%;
+    }
+
+    .attribution {
+        font-size: .4rem;
     }
 }
